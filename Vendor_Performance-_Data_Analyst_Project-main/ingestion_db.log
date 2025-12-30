@@ -1,0 +1,100 @@
+2025-07-16 22:29:43,386 - INFO - Ingesting begin_inventory.csv into database
+2025-07-16 22:29:45,279 - INFO - Ingesting end_inventory.csv into database
+2025-07-16 22:29:50,931 - INFO - Ingesting purchases.csv into database
+2025-07-16 22:30:36,605 - INFO - Ingesting purchase_prices.csv into database
+2025-07-16 22:30:52,589 - INFO - Ingesting sales.csv into database
+2025-07-16 22:43:27,359 - INFO - Ingesting vendor_invoice.csv into database
+2025-07-16 22:43:27,551 - INFO - ----------------------Ingestion Complete-----------------------------
+2025-07-16 22:43:27,551 - INFO - Total time taken: 13.74 minutes
+2025-07-16 22:46:17,562 - INFO - Creating Vendor summary Table......
+2025-07-16 22:46:39,291 - INFO -    VendorNumber                   VendorName  Brand              Description  PurchasePrice  ...  TotalSalesQuantity TotalSalesDollars  TotalSalesPrice  TotalExciseTax  FreightCost
+0          1128  BROWN-FORMAN CORP             1233  Jack Daniels No 7 Black          26.27  ...            142049.0        5101919.51        672819.31       260999.20     68601.68
+1          4425        MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...            160247.0        4819073.49        561512.37       294438.66    144929.24
+2         17035  PERNOD RICARD USA             8068         Absolut 80 Proof          18.24  ...            187140.0        4538120.60        461140.15       343854.07    123780.22
+3          3960  DIAGEO NORTH AMERICA INC      4261   Capt Morgan Spiced Rum          16.17  ...            200412.0        4475972.88        420050.01       368242.80    257032.07
+4          3960  DIAGEO NORTH AMERICA INC      3545          Ketel One Vodka          21.89  ...            135838.0        4223107.62        545778.28       249587.83    257032.07
+
+[5 rows x 14 columns]
+2025-07-16 22:46:39,309 - INFO - Cleaning Data......
+2025-07-16 22:46:39,320 - INFO -    VendorNumber                VendorName  Brand              Description  PurchasePrice  ...  TotalSalesDollars TotalSalesPrice  TotalExciseTax  FreightCost  volume
+0          1128         BROWN-FORMAN CORP   1233  Jack Daniels No 7 Black          26.27  ...         5101919.51       672819.31       260999.20     68601.68  1750.0
+1          4425     MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...         4819073.49       561512.37       294438.66    144929.24  1750.0
+2         17035         PERNOD RICARD USA   8068         Absolut 80 Proof          18.24  ...         4538120.60       461140.15       343854.07    123780.22  1750.0
+3          3960  DIAGEO NORTH AMERICA INC   4261   Capt Morgan Spiced Rum          16.17  ...         4475972.88       420050.01       368242.80    257032.07  1750.0
+4          3960  DIAGEO NORTH AMERICA INC   3545          Ketel One Vodka          21.89  ...         4223107.62       545778.28       249587.83    257032.07  1750.0
+
+[5 rows x 15 columns]
+2025-07-16 22:46:39,334 - INFO - Ingesting data....
+2025-07-16 22:55:33,833 - INFO - Creating Vendor Summary Table...
+2025-07-16 22:55:57,737 - INFO - Summary Data Retrieved:
+   VendorNumber                   VendorName  Brand              Description  PurchasePrice  ...  TotalSalesQuantity TotalSalesDollars  TotalSalesPrice  TotalExciseTax  FreightCost
+0          1128  BROWN-FORMAN CORP             1233  Jack Daniels No 7 Black          26.27  ...            142049.0        5101919.51        672819.31       260999.20     68601.68
+1          4425        MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...            160247.0        4819073.49        561512.37       294438.66    144929.24
+2         17035  PERNOD RICARD USA             8068         Absolut 80 Proof          18.24  ...            187140.0        4538120.60        461140.15       343854.07    123780.22
+3          3960  DIAGEO NORTH AMERICA INC      4261   Capt Morgan Spiced Rum          16.17  ...            200412.0        4475972.88        420050.01       368242.80    257032.07
+4          3960  DIAGEO NORTH AMERICA INC      3545          Ketel One Vodka          21.89  ...            135838.0        4223107.62        545778.28       249587.83    257032.07
+
+[5 rows x 14 columns]
+2025-07-16 22:55:57,756 - INFO - Cleaning Data...
+2025-07-16 22:55:57,771 - INFO - Cleaned Data Preview:
+   VendorNumber                VendorName  Brand              Description  PurchasePrice  ...  volume Grossprofit  ProfitMargin  StockTurnover  SalestoPurchaseRatio
+0          1128         BROWN-FORMAN CORP   1233  Jack Daniels No 7 Black          26.27  ...  1750.0  1290667.91     25.297693       0.979108              1.338647
+1          4425     MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...  1750.0  1015032.27     21.062810       0.976890              1.266830
+2         17035         PERNOD RICARD USA   8068         Absolut 80 Proof          18.24  ...  1750.0  1119816.92     24.675786       0.998575              1.327594
+3          3960  DIAGEO NORTH AMERICA INC   4261   Capt Morgan Spiced Rum          16.17  ...  1750.0  1214774.94     27.139908       0.993703              1.372493
+4          3960  DIAGEO NORTH AMERICA INC   3545          Ketel One Vodka          21.89  ...  1750.0  1199901.61     28.412764       0.983556              1.396897
+
+[5 rows x 19 columns]
+2025-07-16 22:55:57,791 - INFO - Removing Duplicate Columns...
+2025-07-16 22:55:57,793 - INFO - Ingesting Data to Database...
+2025-07-16 22:55:57,797 - ERROR - Error occurred: duplicate column name: volume
+2025-07-16 22:58:35,268 - INFO - Creating Vendor Summary Table...
+2025-07-16 22:58:57,160 - INFO - Summary Data Retrieved:
+   VendorNumber                   VendorName  Brand              Description  PurchasePrice  ...  TotalSalesQuantity TotalSalesDollars  TotalSalesPrice  TotalExciseTax  FreightCost
+0          1128  BROWN-FORMAN CORP             1233  Jack Daniels No 7 Black          26.27  ...            142049.0        5101919.51        672819.31       260999.20     68601.68
+1          4425        MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...            160247.0        4819073.49        561512.37       294438.66    144929.24
+2         17035  PERNOD RICARD USA             8068         Absolut 80 Proof          18.24  ...            187140.0        4538120.60        461140.15       343854.07    123780.22
+3          3960  DIAGEO NORTH AMERICA INC      4261   Capt Morgan Spiced Rum          16.17  ...            200412.0        4475972.88        420050.01       368242.80    257032.07
+4          3960  DIAGEO NORTH AMERICA INC      3545          Ketel One Vodka          21.89  ...            135838.0        4223107.62        545778.28       249587.83    257032.07
+
+[5 rows x 14 columns]
+2025-07-16 22:58:57,178 - INFO - Cleaning Data...
+2025-07-16 22:58:57,192 - INFO - Cleaned Data Preview:
+   VendorNumber                VendorName  Brand              Description  PurchasePrice  ...  volume Grossprofit  ProfitMargin  StockTurnover  SalestoPurchaseRatio
+0          1128         BROWN-FORMAN CORP   1233  Jack Daniels No 7 Black          26.27  ...  1750.0  1290667.91     25.297693       0.979108              1.338647
+1          4425     MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...  1750.0  1015032.27     21.062810       0.976890              1.266830
+2         17035         PERNOD RICARD USA   8068         Absolut 80 Proof          18.24  ...  1750.0  1119816.92     24.675786       0.998575              1.327594
+3          3960  DIAGEO NORTH AMERICA INC   4261   Capt Morgan Spiced Rum          16.17  ...  1750.0  1214774.94     27.139908       0.993703              1.372493
+4          3960  DIAGEO NORTH AMERICA INC   3545          Ketel One Vodka          21.89  ...  1750.0  1199901.61     28.412764       0.983556              1.396897
+
+[5 rows x 19 columns]
+2025-07-16 22:58:57,208 - INFO - Removing Duplicate Columns...
+2025-07-16 22:58:57,210 - INFO - Ingesting Data to Database...
+2025-07-16 22:58:57,210 - WARNING - Duplicate column names found (case-insensitive): ['volume']
+2025-07-16 22:58:57,263 - INFO - vendor_sales_summary ingested with 10692 rows and 18 columns.
+2025-07-16 22:58:57,263 - INFO - Data Ingestion Completed Successfully.
+2025-07-16 23:00:12,036 - INFO - Creating Vendor Summary Table...
+2025-07-16 23:00:34,072 - INFO - Summary Data Retrieved:
+   VendorNumber                   VendorName  Brand              Description  PurchasePrice  ...  TotalSalesQuantity TotalSalesDollars  TotalSalesPrice  TotalExciseTax  FreightCost
+0          1128  BROWN-FORMAN CORP             1233  Jack Daniels No 7 Black          26.27  ...            142049.0        5101919.51        672819.31       260999.20     68601.68
+1          4425        MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...            160247.0        4819073.49        561512.37       294438.66    144929.24
+2         17035  PERNOD RICARD USA             8068         Absolut 80 Proof          18.24  ...            187140.0        4538120.60        461140.15       343854.07    123780.22
+3          3960  DIAGEO NORTH AMERICA INC      4261   Capt Morgan Spiced Rum          16.17  ...            200412.0        4475972.88        420050.01       368242.80    257032.07
+4          3960  DIAGEO NORTH AMERICA INC      3545          Ketel One Vodka          21.89  ...            135838.0        4223107.62        545778.28       249587.83    257032.07
+
+[5 rows x 14 columns]
+2025-07-16 23:00:34,090 - INFO - Cleaning Data...
+2025-07-16 23:00:34,102 - INFO - Cleaned Data Preview:
+   VendorNumber                VendorName  Brand              Description  PurchasePrice  ...  volume Grossprofit  ProfitMargin  StockTurnover  SalestoPurchaseRatio
+0          1128         BROWN-FORMAN CORP   1233  Jack Daniels No 7 Black          26.27  ...  1750.0  1290667.91     25.297693       0.979108              1.338647
+1          4425     MARTIGNETTI COMPANIES   3405    Tito's Handmade Vodka          23.19  ...  1750.0  1015032.27     21.062810       0.976890              1.266830
+2         17035         PERNOD RICARD USA   8068         Absolut 80 Proof          18.24  ...  1750.0  1119816.92     24.675786       0.998575              1.327594
+3          3960  DIAGEO NORTH AMERICA INC   4261   Capt Morgan Spiced Rum          16.17  ...  1750.0  1214774.94     27.139908       0.993703              1.372493
+4          3960  DIAGEO NORTH AMERICA INC   3545          Ketel One Vodka          21.89  ...  1750.0  1199901.61     28.412764       0.983556              1.396897
+
+[5 rows x 19 columns]
+2025-07-16 23:00:34,120 - INFO - Removing Duplicate Columns...
+2025-07-16 23:00:34,120 - INFO - Ingesting Data to Database...
+2025-07-16 23:00:34,120 - WARNING - Duplicate column names found (case-insensitive): ['volume']
+2025-07-16 23:00:34,177 - INFO - vendor_sales_summary ingested with 10692 rows and 18 columns.
+2025-07-16 23:00:34,177 - INFO - Data Ingestion Completed Successfully.
