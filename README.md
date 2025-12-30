@@ -40,4 +40,4 @@ To analyze vendor performance using sales, purchases, and freight data, and gene
 
 1. **Clone or download** the repository:
    ```bash
-   git clone https://github.com/Sumit724932/Vendor_Performance-_Data_Analyst_Project.git
+   [git clone https://github.com/coderantrik/Vendor_Performance-_Data_Analyst_Project.git]
